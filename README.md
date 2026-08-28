@@ -1,5 +1,12 @@
 # no-globe-kit
 
+**[Live demo →](https://metervara.github.io/no-globe-kit/)**
+
+> [!NOTE]
+> Not a serious project, but a POC done out of curiosity — "could you fake a globe
+> with nothing but a quad and some maths?" — built to find out, not to be used
+> for anything.
+
 A globe with no globe in it. The scene contains **one flat quad** and a fragment
 shader. No sphere geometry, no SDF raymarching, no instancing tricks — just an
 analytic ray/sphere intersection per pixel, and an equirectangular texture
