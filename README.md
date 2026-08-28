@@ -130,7 +130,14 @@ same ray setup on the CPU. Change one, change the other.
 
 ## Deploying
 
-Pushing to `main` builds and publishes to GitHub Pages via
-`.github/workflows/deploy.yml`. Enable it once under **Settings → Pages →
-Source → GitHub Actions**. `base: './'` in `vite.config.ts` keeps asset paths
-relative, so it works from any repo subpath without further config.
+Push to `main` and that's it — `.github/workflows/deploy.yml` builds and
+publishes to GitHub Pages. The `enablement: true` on `configure-pages` switches
+Pages on for the repo the first time it runs, so there is no manual setup step.
+
+`base: './'` in `vite.config.ts` keeps asset paths relative, so the build works
+from any repo subpath without knowing the repo name. Node comes from `.nvmrc`,
+so local and CI can't drift.
+
+Two caveats: Pages on a **private** repo needs a paid plan (public repos are
+fine on the free tier), and if the org restricts Actions permissions you may
+still have to flip **Settings → Pages → Source → GitHub Actions** by hand.
