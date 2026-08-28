@@ -1,0 +1,23 @@
+/* Deliberately minimal: lil-gui brings its own styling. */
+html,
+body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  background: #0a0c12;
+  color: #cfd6e4;
+  font-family: system-ui, sans-serif;
+}
+
+#stage {
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: grab;
+  touch-action: none; /* so a drag rotates the globe instead of scrolling */
+}
+
+.lil-gui .file-row {
+  padding: 4px 6px;
+  font-size: 11px;
+}
